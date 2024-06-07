@@ -1,0 +1,16 @@
+:root {
+    --white: #fafaf9;
+    --gray: #64748b;
+    --blue: #06b6d4;
+    --black: #020617;
+    --yellow: #f59e0b;
+    
+}
+html {
+    background-image: url('./assets/matthieu-rochette-F3NmwcQLzu8-unsplash.jpg');
+    background-size: cover;
+}
+body {
+  margin: 0;
+  padding: 0;
+}

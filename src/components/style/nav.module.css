@@ -1,0 +1,30 @@
+.nav {
+    background-color: var(--gray);
+    width: 100vw;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 400px; 
+    /* 100px each link */
+}
+ul > li > a {
+    text-decoration: none;
+    color: var(--white); 
+}
+.icon {
+    width: 25px;
+    height: 25px;
+}
+.shopping {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}

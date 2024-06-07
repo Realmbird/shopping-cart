@@ -1,0 +1,46 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Shop > renders 1`] = `
+<div>
+  <div
+    class="shop"
+  >
+    <div
+      class="catalog"
+    >
+      <div
+        class="_product_a7be37"
+      >
+        <h3>
+          I'm a product(test)
+        </h3>
+        <img
+          alt="I'm a product(test)"
+          src="https://static.wixstatic.com/media/a9ff3b_2dc1e209d10945a7b4329d2328dfcd7b.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/a9ff3b_2dc1e209d10945a7b4329d2328dfcd7b.jpg"
+        />
+        <p
+          class="price"
+        >
+          <span>
+            $
+          </span>
+          10
+        </p>
+        <div
+          class="quantiy"
+        >
+          <button>
+            -
+          </button>
+          <span>
+            0
+          </span>
+          <button>
+            +
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

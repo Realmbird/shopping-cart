@@ -1,0 +1,24 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Home > renders 1`] = `
+<div>
+  <div>
+    <div
+      class="_home_693d29"
+    >
+      <div
+        class="_title_693d29"
+      >
+        <img
+          alt="logo"
+          class="_logo_693d29"
+          src="/src/assets/logo-site.png"
+        />
+        <h1>
+          Awesome Shop
+        </h1>
+      </div>
+    </div>
+  </div>
+</div>
+`;
