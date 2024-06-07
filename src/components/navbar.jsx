@@ -2,7 +2,7 @@ import styles from './style/nav.module.css'
 import { Link } from "react-router-dom";
 import Cart from "../assets/grocery-store.png"
 
-function Nav () {
+function Nav ({cart}) {
     return(
         <nav className={styles.nav}>
             <ul>
@@ -20,7 +20,10 @@ function Nav () {
                 </li>
             </ul>
             <div className={styles.shopping}>
-                <img className = {styles.icon} src={Cart} alt="Shopping" />
+                <Link to="cart">
+                    <img className = {styles.icon} src={Cart} alt="Shopping" />
+                </Link>
+                {cart.length}
             </div>
         </nav>
     );

@@ -1,7 +1,7 @@
 import styles from './style/product.module.css'
 import { useState } from 'react';
 import PropTypes from 'prop-types';
-function Product ({title, image, price}) {
+function Product ({id, title, image, price, addToCart}) {
     const [quantity, setQuantity] = useState(0);
     const increaseQuantity = (e) => {
         e.preventDefault();
@@ -20,15 +20,13 @@ function Product ({title, image, price}) {
             setQuantity(0);
         }
     }
-    const addToCart = (e) => {
-        e.preventDefault()
-    }
+
     return(
         <div className={styles.product}>
             <h3>{title}</h3>
             <img src = {image} alt = {title} />
             <p className="price"><span>$</span>{price}</p>
-            <form onSubmit={addToCart} className={styles.interactions}>
+            <form onSubmit={(e) => addToCart(e, {id, title, image, price}, quantity)} className={styles.interactions}>
                 <div className ={styles.quantity}>
                     <button onClick={decreaseQuantity}>-</button>
                     <input value = {quantity} onChange={changeQuantity} />
@@ -40,11 +38,13 @@ function Product ({title, image, price}) {
     )
 }
 Product.propTypes = {
+    id: PropTypes.number,
     title: PropTypes.string,
     image: PropTypes.string,
     price: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.number,
-      ])
+      ]),
+    addToCart: PropTypes.func.isRequired,
   };
 export default Product
