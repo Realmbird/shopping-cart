@@ -1,5 +1,6 @@
 import styles from './style/product.module.css'
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 function Product ({title, image, price}) {
     const [quantity, setQuantity] = useState(0);
     const increaseQuantity = (e) => {
@@ -38,4 +39,12 @@ function Product ({title, image, price}) {
         </div>
     )
 }
+Product.propTypes = {
+    title: PropTypes.string,
+    image: PropTypes.string,
+    price: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.number,
+      ])
+  };
 export default Product

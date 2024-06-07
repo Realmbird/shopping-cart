@@ -1,13 +1,30 @@
 import Nav from './navbar'
 import styles from './style/shop.module.css'
 import Product from './product'
+import { useEffect, useState } from 'react'
 function Shop () {
+    const [response, setResponse] = useState([])
+    const [loading, setLoading] = useState(true)
+    // fetch on mount
+    useEffect(() => {
+        fetch('https://fakestoreapi.com/products?limit=5')
+            .then(res=>res.json())
+            .then(json=>{
+                console.log(json)
+                setLoading(false)
+                setResponse(json)
+            }) 
+    }, [])
     return (
         <>
             <div className="shop">
-                <div className="catalog">
-                    {/* title, image, price*/}
-                    <Product title = "I'm a product(test)" image = "https://static.wixstatic.com/media/a9ff3b_2dc1e209d10945a7b4329d2328dfcd7b.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/a9ff3b_2dc1e209d10945a7b4329d2328dfcd7b.jpg" price = "10" />
+                <div className={styles.catalog}>
+                    {/* title, image, price */}
+                   
+                    {loading && <div>Loading</div>}
+                    {response.map((res) => (
+                       <Product  key={res.id} title = {res.title} image = {res.image} price = {res.price} />
+                    ))}
                 </div>
             </div>
         </>

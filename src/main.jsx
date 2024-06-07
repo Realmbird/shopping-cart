@@ -5,6 +5,7 @@ import Home from './components/home.jsx'
 import Shop from './components/shop.jsx'
 import Template from './components/template.jsx';
 import './index.css'
+import ErrorPage from './components/error.jsx';
 
 const router = createBrowserRouter([
   {
@@ -18,7 +19,8 @@ const router = createBrowserRouter([
         path: "shop",
         element: <Shop />, 
       }
-    ]
+    ],
+    errorElement: <ErrorPage />
   }
 ]);
 ReactDOM.createRoot(document.getElementById('root')).render(

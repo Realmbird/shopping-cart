@@ -9,6 +9,8 @@
 html {
     background-image: url('./assets/matthieu-rochette-F3NmwcQLzu8-unsplash.jpg');
     background-size: cover;
+    background-repeat: repeat;
+    
 }
 body {
   margin: 0;
